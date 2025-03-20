@@ -1,0 +1,144 @@
+nav {
+  position: fixed;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  z-index: 99999;
+}
+nav .logo {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+}
+nav ul li::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #2192ff;
+  position: absolute;
+  left: 10%;
+  bottom: -10px;
+  transition: width 0.5s;
+}
+nav ul li:hover::after {
+  width: 80%;
+}
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover {
+  color: #2192ff; 
+}
+nav ul li a.active {
+  color: #2192ff;
+}
+nav ul li a.active::after {
+  content: "";
+  width: 80%;
+  height: 3px;
+  background: #2192ff;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+} 
+nav .menu-btn {
+  display: none;
+  cursor: pointer;
+}
+nav .menu-btn i {
+  color: #fff;
+}
+nav .icon {
+  font-size: 30px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+
+@media (max-width: 920px) {
+  nav .menu-btn {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  nav ul.open {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    display: block;
+    font-size: 20px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: #2192ff;
+  }
+  nav ul li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #2192ff;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: width 0.5s;
+  }
+  nav ul li:hover::after {
+    width: 20%;
+  }
+  nav ul li a.active::after {
+    content: "";
+    width: 20%;
+    height: 3px;
+    background: #2192ff;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+  }
+}
