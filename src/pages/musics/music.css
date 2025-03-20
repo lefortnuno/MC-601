@@ -1,0 +1,117 @@
+.content-wrapper {
+  padding: 0 16px;
+  overflow-x: hidden;
+  width: 100%;
+  top: 80px;
+  position: relative;
+}
+.content-wrapper .video-list {
+  display: grid;
+  gap: 16px;
+  padding: 30px 0;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.content-wrapper .video-list .video-card { 
+  text-decoration: none;
+}
+.content-wrapper .video-list .video-card .thumbnail-container {
+  position: relative;
+}
+.content-wrapper .video-list .video-card .thumbnail {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+  background: var(--light-white-color);
+}
+.content-wrapper .video-list .video-card .duration {
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  color: #fff;
+  font-size: 0.675rem;
+  padding: 0 5px;
+  border-radius: 5px;
+  background: var(--overlay-dark-color);
+}
+.content-wrapper .video-list .video-card .video-info {
+  display: flex;
+  gap: 11px;
+  padding: 8px 8px;
+}
+.content-wrapper .video-list .video-card .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.content-wrapper .video-list .video-card .title {
+  font-size: 0.8rem;
+  color: var(--black-color);
+  font-weight: 600;
+  line-height: 1.375;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.content-wrapper .video-list .video-card:hover .title {
+  color: var(--primary-color);
+}
+.content-wrapper .video-list .video-card p {
+  font-size: 0.675rem;
+  color: var(--secondary-color);
+}
+.content-wrapper .video-list .video-card .channel-name {
+  margin: 4px 0 2px;
+}
+.video-card.see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #f0f0f0;
+  border-radius: 8px;
+  height: 200px;
+}
+
+.video-card.see-more .duration {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.voir-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(245, 245, 245, 0.8);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  backdrop-filter: blur(5px);
+  transition: 0.6s;
+}
+
+.voir-plus p {
+  color: #ff0000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #ff0000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.6s;
+}
+
+.voir-plus:hover {
+  background: rgba(84, 79, 79, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.voir-plus:hover p {
+  color: white;
+  border-color: white;
+}
+ 

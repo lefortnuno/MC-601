@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MS | Trofel",
+  title: "MC | Trofel",
   description: "Trofel prod in code!",
 };
 
