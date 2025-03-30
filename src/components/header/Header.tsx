@@ -2,17 +2,22 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
-import "./header.css";
 import { BsList, BsXLg } from "react-icons/bs";
+import "./header.css"
 
-export default function Header() {
+interface HeaderProps {
+  menuOpen: boolean;
+  setMenuOpen: (open: boolean) => void;
+}
+
+export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav>
-      <div className="logo">Trofel</div>
+      <div className="logo">
+        <img src="/logo/mc-white.png" alt="Logo" />
+      </div>
       <input
         type="checkbox"
         id="click"
@@ -24,34 +29,22 @@ export default function Header() {
       </label>
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <Link
-            href="/"
-            className={"nav-list " + (pathname === "/" ? "active" : "")}
-          >
+          <Link href="/" className={pathname === "/" ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Accueil
           </Link>
         </li>
         <li>
-          <Link
-            href="/musique"
-            className={"nav-list " + (pathname === "/musique" ? "active" : "")}
-          >
+          <Link href="/pages/musics" className={pathname === "/pages/musics/music" ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Musique
           </Link>
         </li>
         <li>
-          <Link
-            href="/film"
-            className={"nav-list " + (pathname === "/film" ? "active" : "")}
-          >
+          <Link href="/pages/film" className={pathname === "/pages/film" ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Film
           </Link>
         </li>
         <li>
-          <Link
-            href="/contact"
-            className={"nav-list " + (pathname === "/contact" ? "active" : "")}
-          >
+          <Link href="/pages/contact" className={pathname === "/pages/contact" ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Contact
           </Link>
         </li>

@@ -5,11 +5,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  /* --light-white-color: #f5f5f5; 
-  --overlay-dark-color: #00000099;  
-  --primary-color: #ff0000;  
-  --secondary-color: #606060;  
-  --black-color: #000000;   */
+  --couleur: #e53935;
+  --couleur2: #d32f2f;
+  --slide_tap: #fe8a39;
+  --slide_tap2: #f23b26;
+  --slide_tap_hover: #fe791b;
+  --slide_tap_hover2: #fd1c1c;
+  --couleur_hover: #f23b26;
+  --couleur2_hover2: #fd1c1c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +30,16 @@ body {
   font-size: 12px;
   overflow: hidden;
 }
+
+.contenu-trofel.blur {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+.contenu-trofel {
+  transition: filter 0.3s ease-in-out;
+}
+
 @media (max-width: 648px) {
   html {
     -webkit-overflow-scrolling: touch;

@@ -4,18 +4,25 @@ nav {
   display: flex;
   height: 80px;
   width: 100%;
-  background: #1b1b1b;
+  background: transparent;
+  /* background: #1b1b1b; */
   align-items: center;
   justify-content: space-between;
   padding: 0 50px 0 100px;
   flex-wrap: wrap;
-  z-index: 99999;
+  z-index: 1001;
 }
 nav .logo {
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
+nav .logo img {
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
+}
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -33,7 +40,7 @@ nav ul li::after {
   content: "";
   width: 0;
   height: 3px;
-  background: #2192ff;
+  background: linear-gradient(147deg, var(--couleur) 0%, var(--couleur2) 74%);
   position: absolute;
   left: 10%;
   bottom: -10px;
@@ -53,21 +60,24 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 nav ul li a:hover {
-  color: #2192ff; 
+  color: var(--couleur);
 }
 nav ul li a.active {
-  color: #2192ff;
+  background: linear-gradient(147deg, var(--couleur) 0%, var(--couleur2) 74%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 nav ul li a.active::after {
   content: "";
   width: 80%;
   height: 3px;
-  background: #2192ff;
+  background: linear-gradient(147deg, var(--couleur) 0%, var(--couleur2) 74%);
   position: absolute;
   left: 50%;
   bottom: -10px;
   transform: translateX(-50%);
-} 
+}
 nav .menu-btn {
   display: none;
   cursor: pointer;
@@ -89,14 +99,26 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 920px) {
+  nav {
+    justify-content: center;
+    padding: 0px;
+  }
+  nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
   nav .menu-btn {
+    position: relative;
     display: block;
+    left: 35%;
   }
   nav ul {
     position: fixed;
     top: 80px;
     left: -100%;
-    background: #111;
+    background: transparent;
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -116,13 +138,16 @@ input[type="checkbox"] {
   }
   nav ul li a.active,
   nav ul li a:hover {
-    color: #2192ff;
+    background: linear-gradient(147deg, var(--couleur) 0%, var(--couleur2) 74%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   nav ul li::after {
     content: "";
     width: 0;
     height: 3px;
-    background: #2192ff;
+    background: linear-gradient(147deg, var(--couleur) 0%, var(--couleur2) 74%);
     position: absolute;
     left: 50%;
     bottom: -10px;
@@ -136,7 +161,7 @@ input[type="checkbox"] {
     content: "";
     width: 20%;
     height: 3px;
-    background: #2192ff;
+    background: linear-gradient(147deg, var(--couleur) 0%, var(--couleur2) 74%);
     position: absolute;
     left: 50%;
     bottom: -10px;
