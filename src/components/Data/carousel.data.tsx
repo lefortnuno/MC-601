@@ -11,7 +11,7 @@ export interface Item {
 
 export const items: Item[] = [
   {
-    imgSrc: "/images/veve.png",
+    imgSrc: "/images/veve.webp",
     video: "/video/webp/veve-mc.webm",
     author: "601 Bro",
     title: "WORKOUT ",
@@ -22,7 +22,7 @@ export const items: Item[] = [
     link: "#",
   },
   {
-    imgSrc: "/images/diaspo.png",
+    imgSrc: "/images/diaspo.webp",
     video: "/video/webp/diaspo-mc.webm",
     author: "Masoandro Capital",
     title: "DIASPORA MALAGASY",
@@ -33,7 +33,7 @@ export const items: Item[] = [
     link: "#",
   },
   {
-    imgSrc: "/images/veve2.png",
+    imgSrc: "/images/veve2.webp",
     video: "/video/webp/veve workout2.webm",
     author: "Tony Braven",
     title: "PARK VEVE",

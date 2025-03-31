@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MC | Trofel",
+  title: "MC | Masoandro Capital",
   description: "Trofel prod in code!",
 };
 
