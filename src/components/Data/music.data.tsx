@@ -1,25 +1,59 @@
 export interface VideoItem {
-    thumbnail: string;
-    duration: string;
-    title: string;
-    channelName: string;
-    link: string;
-  }
-  
-  export const videos: VideoItem[] = [
-    {
-      thumbnail: "https://i.ytimg.com/vi/OORUHkgg4IM/maxresdefault.jpg",
-      duration: "10:03",
-      title: "Top 10 Easy To Create JavaScript Games For Beginners",
-      channelName: "Directed by CodingNepal",
-      link: "https://www.youtube.com/watch?v=OORUHkgg4IM",
-    },
-    {
-      thumbnail: "https://i.ytimg.com/vi/qOO6lVMhmGc/maxresdefault.jpg",
-      duration: "23:45",
-      title: "FEMME DE SA VIE - HIRA",
-      channelName: "Directed by 601 bro",
-      link: "https://www.youtube.com/watch?v=aF_XP1Ey_G4",
-    },
-  ];
-  
+  thumbnail: string;
+  duration: string;
+  title: string;
+  channelName: string;
+  link: string;
+}
+
+export const videos: VideoItem[] = [
+  {
+    thumbnail: "/images/musics/tsyHoZao.png",
+    duration: "3:29",
+    title: "601 BRO - TSY HO ZAO",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=jMEF9rgG1iQ&ab_channel=MASOANDROCAPITAL",
+  },
+  {
+    thumbnail: "/images/musics/engaoTseky.png",
+    duration: "2:45",
+    title: "601 BRO - Engao Tseky",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=aF_XP1Ey_G4&ab_channel=MASOANDROCAPITAL",
+  },
+  {
+    thumbnail: "/images/musics/realGasyMan.png",
+    duration: "2:19",
+    title: "SOUDARÀ - REAL GASY MAN ",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=ULClERieOwg&ab_channel=MASOANDROCAPITAL",
+  },
+  {
+    thumbnail: "/images/musics/iaSha.png",
+    duration: "4:48",
+    title: "SOUDARÀ Feat DM - ꞮA SHA ?",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=xHpiadtegQw&ab_channel=MASOANDROCAPITAL",
+  },
+  {
+    thumbnail: "/images/musics/femmeDeMaVie.png",
+    duration: "3:29",
+    title: "601 BRO - Femme de ma vie",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=jMEF9rgG1iQ&ab_channel=MASOANDROCAPITAL",
+  },
+  {
+    thumbnail: "/images/musics/soaAvao.png",
+    duration: "3:35",
+    title: "SOA AVAO - 601 BRO",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=jMEF9rgG1iQ&ab_channel=MASOANDROCAPITAL",
+  }, 
+  {
+    thumbnail: "/images/musics/fatiavaLavitry.png",
+    duration: "3:06",
+    title: "601BRO - Fitiava lavitry",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=jMEF9rgG1iQ&ab_channel=MASOANDROCAPITAL",
+  }, 
+];

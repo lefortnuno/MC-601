@@ -28,7 +28,7 @@ export default function Contact() {
     >
       {isVideoVisible && (
         <video autoPlay loop muted playsInline>
-          <source src="/video/watersky-corporation.mp4" type="video/mp4" />
+          <source src="/video/webp/watersky-corporation.webm" type="video/mp4" />
           Votre navigateur ne supporte pas la vidéo.
         </video>
       )}

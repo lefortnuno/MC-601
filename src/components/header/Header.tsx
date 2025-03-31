@@ -34,7 +34,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           </Link>
         </li>
         <li>
-          <Link href="/pages/musics" className={pathname === "/pages/musics/music" ? "active" : ""} onClick={() => setMenuOpen(false)}>
+          <Link href="/pages/musics" className={pathname === "/pages/musics" ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Musique
           </Link>
         </li>

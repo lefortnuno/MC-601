@@ -14,7 +14,7 @@ export default function Carousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNextSlide();
-    }, 55000);
+    }, 13500);
 
     return () => clearInterval(interval);
   }, [activeIndex]);
