@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Tektur } from "next/font/google";
+
 import "./globals.css";
 import ClientLayout from "../components/ClientLayout";
 import { Analytics } from "@vercel/analytics/react";
@@ -12,6 +13,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const tektur = Tektur({
+  variable: "--font-tektur",
+  subsets: ["latin"],
+  weight: ["400", "900"], // Tu peux ajuster selon ton besoin
 });
 
 export const metadata: Metadata = {
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${tektur.variable} antialiased`}
       >
         <ClientLayout>{children}</ClientLayout>
         <Analytics />

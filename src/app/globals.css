@@ -29,6 +29,7 @@ body {
   font-family: Poppins;
   font-size: 12px;
   overflow: hidden;
+  font-family: var(--font-tektur), sans-serif;
 }
 
 .contenu-trofel.blur {
