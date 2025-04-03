@@ -28,7 +28,7 @@ export default function Contact() {
   }, []);
 
   const validateForm = () => {
-    let newErrors = { name: "", email: "", message: "" };
+    const newErrors = { name: "", email: "", message: "" };
     let isValid = true;
 
     if (!name.trim()) {
@@ -60,7 +60,7 @@ export default function Contact() {
     const templateParams = {
       name: name,
       email: email,
-      to_email: "trofelnuno6@gmail.com",
+      to_email: "antoniochrystophe92@gmail.com",
       title: `${name} 🚀 Demande de contact importante !`,
       message: message,
     };
@@ -149,8 +149,8 @@ export default function Contact() {
           <div className="right-side">
             <div className="topic-text">Envoyez-nous un message</div>
             <p>
-              Si vous avez du travail pour moi ou toute question, n'hésitez pas
-              à me contacter.
+              Si vous avez du travail pour moi ou toute question, n&apos;hésitez
+              pas à me contacter.
             </p>
             <form onSubmit={handleSubmit}>
               <div className={`input-box ${errors.name ? "error" : ""}`}>

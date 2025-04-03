@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import "../musics/music.css";
 import { videos } from "@/components/Data/film.data";
 
@@ -83,10 +84,13 @@ export default function Film() {
               onClick={() => handleVideoClick(video.link)}
             >
               <div className="thumbnail-container">
-                <img
+                <Image
                   src={video.thumbnail}
-                  alt="Video Thumbnail"
+                  alt={video.title}
                   className="thumbnail"
+                  width={300}
+                  height={169}
+                  priority
                 />
                 <p className="duration">{video.duration}</p>
                 <div className="video-info">

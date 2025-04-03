@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { BsList, BsXLg } from "react-icons/bs";
 import "./header.css";
 
@@ -14,10 +15,16 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   const pathname = usePathname();
 
   return (
-    <nav> 
+    <nav>
       <div className="logo">
-        <Link href="/" onClick={() => setMenuOpen(false)}>
-          <img src="/logo/mc-white.webp" alt="Logo" />
+        <Link href="/" onClick={() => setMenuOpen(false)}> 
+          <Image
+            src="/logo/mc-white.webp"
+            alt="Logo"
+            width={300}
+            height={60}
+            priority
+          />
         </Link>
       </div>
 
@@ -30,25 +37,41 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
       <label htmlFor="click" className="menu-btn">
         {menuOpen ? <BsXLg className="icon" /> : <BsList className="icon" />}
       </label>
-      
+
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <Link href="/" className={pathname === "/" ? "active" : ""} onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/"
+            className={pathname === "/" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
+          >
             Accueil
           </Link>
         </li>
         <li>
-          <Link href="/pages/musics" className={pathname === "/pages/musics" ? "active" : ""} onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/pages/musics"
+            className={pathname === "/pages/musics" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
+          >
             Musique
           </Link>
         </li>
         <li>
-          <Link href="/pages/film" className={pathname === "/pages/film" ? "active" : ""} onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/pages/film"
+            className={pathname === "/pages/film" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
+          >
             Film
           </Link>
         </li>
         <li>
-          <Link href="/pages/contact" className={pathname === "/pages/contact" ? "active" : ""} onClick={() => setMenuOpen(false)}>
+          <Link
+            href="/pages/contact"
+            className={pathname === "/pages/contact" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
+          >
             Contact
           </Link>
         </li>

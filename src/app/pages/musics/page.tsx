@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import "./music.css";
+import Image from "next/image";
 import { videos } from "@/components/Data/music.data";
 
 export default function Music() {
@@ -83,10 +84,13 @@ export default function Music() {
               onClick={() => handleVideoClick(video.link)}
             >
               <div className="thumbnail-container">
-                <img
+                <Image
                   src={video.thumbnail}
-                  alt="Video Thumbnail"
+                  alt={video.title}
                   className="thumbnail"
+                  width={300}
+                  height={169}
+                  priority
                 />
                 <p className="duration">{video.duration}</p>
                 <div className="video-info">

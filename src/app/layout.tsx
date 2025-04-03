@@ -24,6 +24,12 @@ const tektur = Tektur({
 export const metadata: Metadata = {
   title: "MC | Masoandro Capital",
   description: "Trofel prod in code!",
+
+  icons: {
+    icon: "/logo/favicon_io/favicon.ico",
+    shortcut: "/logo/favicon_io/android-chrome-512x512.png",
+    apple: "/logo/favicon_io/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

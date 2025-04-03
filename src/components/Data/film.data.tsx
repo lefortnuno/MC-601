@@ -17,7 +17,7 @@ export interface VideoItem {
     {
       thumbnail: "/images/film/motivation.webp",
       duration: "1:15",
-      title: "Motivation ",
+      title: "Motivation",
       channelName: "Directed by Tony Braven",
       link: "https://www.youtube.com/watch?v=XVNXEC-m9eg",
     },
