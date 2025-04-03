@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { BsList, BsXLg } from "react-icons/bs";
-import "./header.css"
+import "./header.css";
 
 interface HeaderProps {
   menuOpen: boolean;
@@ -14,10 +14,13 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   const pathname = usePathname();
 
   return (
-    <nav>
+    <nav> 
       <div className="logo">
-        <img src="/logo/mc-white.png" alt="Logo" />
+        <Link href="/" onClick={() => setMenuOpen(false)}>
+          <img src="/logo/mc-white.webp" alt="Logo" />
+        </Link>
       </div>
+
       <input
         type="checkbox"
         id="click"
@@ -27,6 +30,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
       <label htmlFor="click" className="menu-btn">
         {menuOpen ? <BsXLg className="icon" /> : <BsList className="icon" />}
       </label>
+      
       <ul className={menuOpen ? "open" : ""}>
         <li>
           <Link href="/" className={pathname === "/" ? "active" : ""} onClick={() => setMenuOpen(false)}>

@@ -19,7 +19,7 @@ export const items: Item[] = [
     topic: "Motivation",
     description:
       "Fikotranana hampisaehoana sy hanana hery handrisika ny hafa hanomboka ihany koa, made by Masoandro Capital ...",
-    link: "#",
+    link: "https://www.youtube.com/watch?v=XVNXEC-m9eg",
   },
   {
     imgSrc: "/images/diaspo.webp",
@@ -30,7 +30,7 @@ export const items: Item[] = [
     topic: "ANIMAL3",
     description:
       "Atokiny aty ivelany dia mampiseho ny fiharamihina hatrany ny Malagasy ny madagasika na samy manana ny fiaviany azy !",
-    link: "#",
+    link: "https://www.youtube.com/@MASOANDROCAPITAL",
   },
   {
     imgSrc: "/images/veve2.webp",
@@ -41,6 +41,6 @@ export const items: Item[] = [
     topic: "Clip Rap",
     description:
       "Salam real family, ito ary ny vokatra nampanantenaina. 100% Malagasy 100% Malagasy. Mankasitra hatrany an'i Masoandro Capital...",
-    link: "#",
+    link: "https://www.youtube.com/watch?v=vupxm9kZQo8",
   },
 ];

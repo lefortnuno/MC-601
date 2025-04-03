@@ -10,7 +10,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  height: 110%;
   object-fit: cover;
   z-index: -2;
   filter: blur(2px) grayscale(100%);
@@ -119,7 +119,7 @@
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
-  border: 1px solid #afafb6;
+  border: 1px solid #afafb6; 
 }
 
 .right-side .message-box {
@@ -156,6 +156,71 @@
     var(--couleur_hover) 0%,
     var(--couleur2_hover2) 74%
   );
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease-in-out;
+}
+
+.input-box.error {
+  width: calc(
+    100% - 120px
+  );  
+}
+
+.error-popup {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(100%, -50%);
+  background: transparent;
+  color: #ff4d4d;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.error-popup-message {
+  height: 110px; 
+}
+
+.error-popup::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #ff4d4d transparent transparent;
+}
+
+.error-input + .error-popup {
+  opacity: 1;
+  visibility: visible;
+}
+
+.error-input {
+  border: 1px solid red !important;
+}
+
+@media (max-width: 600px) { 
+  .input-box.error {
+    width: calc(
+      100% - 50px
+    );  
+  } 
 }
 
 @media (max-width: 950px) {
