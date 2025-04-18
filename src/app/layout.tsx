@@ -23,12 +23,17 @@ const tektur = Tektur({
 
 export const metadata: Metadata = {
   title: "MC | Masoandro Capital",
-  description: "Trofel prod in code!",
+  description: "Tony Braven de Masoandro Capital, originaire du 601 Bro, collabore avec Trofel pour donner vie à MC par le code !",
 
   icons: {
     icon: "/logo/favicon_io/favicon.ico",
     shortcut: "/logo/favicon_io/android-chrome-512x512.png",
     apple: "/logo/favicon_io/apple-touch-icon.png",
+  },
+
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://masoandrocapital.vercel.app/",
   },
 };
 

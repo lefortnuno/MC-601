@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://masoandrocapital.vercel.app/sitemap.xml

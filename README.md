@@ -1,5 +1,13 @@
 # MC-601
-Masoandro Capital de 601 BRO - Tony Braven 
+
+Masoandro Capital de 601 BRO - Tony Braven
+
+# EmailJs
+
+Pour recevoir les "contact-us" des interesser.
+https://dashboard.emailjs.com/admin/
+
+# --- Auto-Gen
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
