@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: "https://masoandrocapital.vercel.app",
   generateRobotsTxt: true,
+  outDir: "./public",
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
