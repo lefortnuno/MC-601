@@ -1,11 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { servicesData } from "@/components/Data/service.data";
-import "./service.css"; 
+import {
+  servicesData,
+  chiffresData,
+  socialLinksData,
+} from "@/components/Data/service.data";
+import "./service.css";
+import { BsEye } from "react-icons/bs";
 
 export default function Service() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
+  const [counts, setCounts] = useState(chiffresData.map(() => 0));
 
   useEffect(() => {
     const handleResize = () => {
@@ -17,6 +23,28 @@ export default function Service() {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const intervals = chiffresData.map((item, index) => {
+      const increment = Math.ceil(item.number / 100); // vitesse de l'animation
+      return setInterval(() => {
+        setCounts((prev) => {
+          const newCounts = [...prev];
+          if (newCounts[index] < item.number) {
+            newCounts[index] = Math.min(
+              newCounts[index] + increment,
+              item.number
+            );
+          }
+          return newCounts;
+        });
+      }, 20); // vitesse d'update (20ms)
+    });
+
+    return () => {
+      intervals.forEach(clearInterval);
     };
   }, []);
 
@@ -42,16 +70,56 @@ export default function Service() {
               <ul className="service-list">
                 {category.details.map((detail, idx) => (
                   <li key={idx}>
-                    <span className="checkmark">
-                      ✔️ 
-                    </span>{" "}
-                    {detail}
+                    <span className="checkmark">✔️</span> {detail}
                   </li>
                 ))}
               </ul>
+
+              {category.link && (
+                <div className="service-button-wrapper">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={category.link}
+                    className="service-button"
+                  >
+                    <BsEye style={{ marginRight: "0.5rem" }} /> Nos projets
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="chiffres-section">
+        <h2 className="chiffres-title">Nos chiffres clés</h2>
+        <div className="chiffres-grid">
+          {chiffresData.map((item, index) => (
+            <div key={index} className="chiffre-item">
+              <h3 className="chiffre-number">
+                {counts[index]}
+                {item.isPercentage && "%"}
+              </h3>
+              <p className="chiffre-label">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="social-links">
+        {socialLinksData.map((social, index) => (
+          <a
+            key={index}
+            href={social.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label={social.label}
+          >
+            {social.icon}
+          </a>
+        ))}
       </div>
     </div>
   );
