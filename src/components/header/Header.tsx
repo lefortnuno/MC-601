@@ -68,6 +68,15 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
         </li>
         <li>
           <Link
+            href="/pages/services"
+            className={pathname === "/pages/services" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
+          >
+            Service
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/pages/contact"
             className={pathname === "/pages/contact" ? "active" : ""}
             onClick={() => setMenuOpen(false)}
