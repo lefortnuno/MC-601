@@ -2,7 +2,7 @@
 
 import { JSX } from "react";
 import {
-  BsCameraFill,
+  BsCameraReelsFill,
   BsLinkedin,
   BsGithub,
   BsFacebook,
@@ -19,9 +19,9 @@ export interface ServiceInfo {
 
 export const servicesData: ServiceInfo[] = [
   {
-    icon: <BsCameraFill className="service-icon" />,
+    icon: <BsCameraReelsFill className="service-icon" />,
     topic: "Multimedia",
-    link: "",
+    link: "https://www.youtube.com/@MASOANDROCAPITAL",
     details: [
       "Captation d'événements (concerts, conférences, etc.)",
       "Vidéos institutionnelles pour entreprises",
@@ -35,12 +35,12 @@ export const servicesData: ServiceInfo[] = [
     topic: "Création sites web",
     link: "https://trofel.vercel.app/#works",
     details: [
-      "Applications web : sites vitrines, sites sur-mesures, etc",
+      "Applications web : sites vitrines, sites sur-mesure, etc",
       "Analyse de vos besoins",
-      "Mise en place du cahier de charge",
+      "Mise en place du cahier des charges",
       "Réalisation des Maquettes/Prototypes",
-      "Livraison au delai convenu",
-      "Deployement et Maintenance",
+      "Livraison au délai convenu",
+      "Déploiement et Maintenance",
     ],
   },
   {
@@ -48,12 +48,12 @@ export const servicesData: ServiceInfo[] = [
     topic: "Développement d'application",
     link: "https://trofel.vercel.app/#works",
     details: [
-      "Applications mobile : Android et iOS",
+      "Applications mobiles : Android et iOS",
       "Logiciels Windows : desktop et laptop",
       "Analyse de vos besoins",
-      "Mise en place du cahier de charge",
+      "Mise en place du cahier des charges",
       "Réalisation des Maquettes/Prototypes",
-      "Livraison au delai convenu",
+      "Livraison au délai convenu",
       "Installation et Maintenance",
     ],
   },
@@ -61,8 +61,8 @@ export const servicesData: ServiceInfo[] = [
 
 export const chiffresData = [
   { number: 5, label: "Années d'expérience" },
-  { number: 3, label: "Partenaires Commercials" },
-  { number: 96, label: "Projets réalisées" },
+  { number: 3, label: "Partenaires commerciaux" },
+  { number: 96, label: "Projets réalisés" },
   { number: 97.8, label: "De clients satisfaits", isPercentage: true },
 ];
 
@@ -74,7 +74,7 @@ export const socialLinksData = [
   },
   {
     icon: <BsFacebook />,
-    link: "https://www.facebook.com/profile.php?id=100092364211179",
+    link: "https://www.facebook.com/profile.php?id=100092114410441",
     label: "Facebook",
   },
   {
