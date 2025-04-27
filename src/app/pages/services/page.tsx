@@ -3,8 +3,7 @@
 import { useEffect, useState } from "react";
 import {
   servicesData,
-  chiffresData,
-  socialLinksData,
+  chiffresData, 
 } from "@/components/Data/service.data";
 import "./service.css";
 import { BsEye } from "react-icons/bs";
