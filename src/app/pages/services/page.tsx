@@ -8,6 +8,7 @@ import {
 } from "@/components/Data/service.data";
 import "./service.css";
 import { BsEye } from "react-icons/bs";
+import Liens from "@/components/contact/liens";
 
 export default function Service() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
@@ -106,21 +107,8 @@ export default function Service() {
           ))}
         </div>
       </div>
-
-      <div className="social-links">
-        {socialLinksData.map((social, index) => (
-          <a
-            key={index}
-            href={social.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            aria-label={social.label}
-          >
-            {social.icon}
-          </a>
-        ))}
-      </div>
+      
+      <Liens />
     </div>
   );
 }

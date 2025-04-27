@@ -214,7 +214,7 @@
 .error-input {
   border: 1px solid red !important;
 }
-
+ 
 @media (max-width: 600px) { 
   .input-box.error {
     width: calc(

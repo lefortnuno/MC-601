@@ -91,8 +91,7 @@
   font-weight: 500;
   color: #fff;
 }
-.chiffres-section {
-  background: url("/background.jpg") no-repeat center/cover;
+.chiffres-section { 
   padding: 4rem 2rem;
   text-align: center;
   color: white;
@@ -146,26 +145,6 @@
 
 .service-button:hover {
   background-color: #e03e3e;
-}
-
-.social-links {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  display: flex;
-  gap: 1rem;
-  z-index: 10;
-}
-
-.social-link {
-  color: white;
-  font-size: 1.8rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-link:hover {
-  transform: translateY(-5px);
-  color: #ff4c4c;
 }
 
 @media (max-width: 820px) {

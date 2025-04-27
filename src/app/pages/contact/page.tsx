@@ -5,6 +5,7 @@ import { BsSend } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 import { contactDetails } from "@/components/Data/contact.data";
+import Liens from "@/components/contact/liens";
 
 export default function Contact() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
@@ -208,6 +209,8 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
+      <Liens />
     </div>
   );
 }
