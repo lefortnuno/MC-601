@@ -120,7 +120,7 @@
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
-  border: 1px solid #afafb6; 
+  border: 1px solid #afafb6;
 }
 
 .right-side .message-box {
@@ -146,17 +146,13 @@
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
-  background: linear-gradient(147deg, white 0%, white 74%);
+  background-color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .right-side .button button:hover {
-  background: linear-gradient(
-    147deg,
-    var(--couleur_hover) 0%,
-    var(--couleur2_hover2) 74%
-  );
+  background-color: #e03e3e;
 }
 
 .input-box {
@@ -167,9 +163,7 @@
 }
 
 .input-box.error {
-  width: calc(
-    100% - 120px
-  );  
+  width: calc(100% - 120px);
 }
 
 .error-popup {
@@ -190,10 +184,10 @@
   height: 55px;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 .error-popup-message {
-  height: 110px; 
+  height: 110px;
 }
 
 .error-popup::after {
@@ -215,13 +209,11 @@
 .error-input {
   border: 1px solid red !important;
 }
- 
-@media (max-width: 600px) { 
+
+@media (max-width: 600px) {
   .input-box.error {
-    width: calc(
-      100% - 50px
-    );  
-  } 
+    width: calc(100% - 50px);
+  }
 }
 
 @media (max-width: 950px) {

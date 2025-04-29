@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import {
-  servicesData,
-  chiffresData, 
-} from "@/components/Data/service.data";
+import { useEffect, useRef, useState } from "react";
+import { servicesData, chiffresData } from "@/components/Data/service.data";
 import "./service.css";
 import { BsEye } from "react-icons/bs";
 import Liens from "@/components/contact/liens";
@@ -12,6 +9,8 @@ import Liens from "@/components/contact/liens";
 export default function Service() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
   const [counts, setCounts] = useState(chiffresData.map(() => 0));
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const chiffresRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,8 +26,27 @@ export default function Service() {
   }, []);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (chiffresRef.current) observer.observe(chiffresRef.current);
+
+    return () => {
+      if (chiffresRef.current) observer.unobserve(chiffresRef.current);
+    };
+  }, [hasAnimated]);
+
+  useEffect(() => {
+    if (!hasAnimated) return;
+
     const intervals = chiffresData.map((item, index) => {
-      const increment = Math.ceil(item.number / 100); // vitesse de l'animation
+      const increment = Math.ceil(item.number / 100);
       return setInterval(() => {
         setCounts((prev) => {
           const newCounts = [...prev];
@@ -40,13 +58,13 @@ export default function Service() {
           }
           return newCounts;
         });
-      }, 20); // vitesse d'update (20ms)
+      }, 20);
     });
 
     return () => {
       intervals.forEach(clearInterval);
     };
-  }, []);
+  }, [hasAnimated]);
 
   return (
     <div
@@ -92,7 +110,7 @@ export default function Service() {
         </div>
       </div>
 
-      <div className="chiffres-section">
+      <div className="chiffres-section" ref={chiffresRef}>
         <h2 className="chiffres-title">Nos chiffres clés</h2>
         <div className="chiffres-grid">
           {chiffresData.map((item, index) => (
@@ -106,7 +124,7 @@ export default function Service() {
           ))}
         </div>
       </div>
-      
+
       <Liens />
     </div>
   );

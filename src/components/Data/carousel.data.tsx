@@ -34,7 +34,7 @@ export const items: Item[] = [
   },
   {
     imgSrc: "/images/veve2.webp",
-    video: "/video/webp/veve workout2.webm",
+    video: "/video/webp/veve-workout2.webm",
     author: "Tony Braven",
     title: "PARK VEVE",
     date: "11 Février 2025",
