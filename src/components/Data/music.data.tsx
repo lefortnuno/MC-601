@@ -56,4 +56,18 @@ export const videos: VideoItem[] = [
     channelName: "Directed by Tony Braven",
     link: "https://www.youtube.com/watch?v=6UzfMmHU_VA",
   },
+  {
+    thumbnail: "/images/musics/haiko.webp",
+    duration: "4:30",
+    title: "NC -Tsy Haiko sasy R&B",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=frFSjaCkRaM",
+  },
+  {
+    thumbnail: "/images/musics/ghetto.webp",
+    duration: "3:11",
+    title: "YOUNG JE - BIG UP TO GHETTO MC2K21",
+    channelName: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=IbGcrrdDIQA",
+  },
 ];

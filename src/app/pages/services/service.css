@@ -2,7 +2,13 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.service-bloc::-webkit-scrollbar {
+  display: none;
 }
 .service-bloc video {
   position: absolute;
@@ -84,7 +90,7 @@
 .checkmark {
   margin-right: 0.5rem;
   font-size: 1.2rem;
-  color: #fff;  
+  color: #fff;
 }
 
 .text {
@@ -92,7 +98,7 @@
   font-weight: 500;
   color: #fff;
 }
-.chiffres-section { 
+.chiffres-section {
   padding: 4rem 2rem;
   text-align: center;
   color: white;
