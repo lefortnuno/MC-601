@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BsSend } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
