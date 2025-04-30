@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { servicesData, chiffresData } from "@/components/Data/service.data";
 import "./service.css";
-import { BsEye } from "react-icons/bs";
+// import { BsEye } from "react-icons/bs";
 import Liens from "@/components/contact/liens";
 
 export default function Service() {
