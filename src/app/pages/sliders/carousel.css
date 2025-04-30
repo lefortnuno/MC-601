@@ -5,16 +5,8 @@
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  /* transition: background-image 0.6s ease-in-out; */
-}
-/* .blog-card {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-*/
+  background-position: center; 
+} 
 .video-background {
   position: absolute;
   top: 50%;
@@ -38,7 +30,7 @@
   transform: scale(0.8);
   padding: 5px;
   box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.4);
-  border-radius: 3px;
+  border-radius: 3px; 
 }
 
 .img-container {
@@ -58,8 +50,8 @@
 }
 
 .content {
-  width: 530px;
-  /* width: 400px;   */
+  /* width: 530px; */
+  width: 350px;  
   padding: 0 10px;
   margin-left: 25px;
   transition: 0.6s;
