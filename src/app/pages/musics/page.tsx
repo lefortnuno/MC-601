@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import "./music.css";
 import Image from "next/image";
-import { videos } from "@/components/Data/music.data";
+import { videos } from "@/components/data/music.data";
+import Video from "@/components/video/Video";
 
 export default function Music() {
+  const [isVideoVisible, setIsVideoVisible] = useState(true);
   const [baseItemsPerPage, setBaseItemsPerPage] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -48,14 +50,20 @@ export default function Music() {
       .replace("watch?v=", "embed/")
       .concat("?autoplay=1&mute=0");
     setSelectedVideo(embedLink);
+    setIsVideoVisible(true);
   };
 
   const handleCloseVideo = () => {
     setSelectedVideo(null);
+    setIsVideoVisible(false);
   };
 
   return (
-    <div className="content-wrapper">
+    <div className="content-wrapper"
+          style={{ backgroundColor: isVideoVisible ? "transparent" : "black" }}
+        >
+          <Video name="diaspo-mc" onVisibilityChange={setIsVideoVisible} />
+          
       {selectedVideo ? (
         <div className="video-player-overlay">
           <button className="close-btn" onClick={handleCloseVideo}>

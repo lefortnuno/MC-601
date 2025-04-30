@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { BsPlus } from "react-icons/bs";
-import { items } from "@/components/Data/carousel.data";
+import { items } from "@/components/data/carousel.data";
 import "./pages/sliders/carousel.css";
 
 export default function Carousel() {

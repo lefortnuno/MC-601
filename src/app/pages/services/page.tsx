@@ -1,29 +1,17 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { servicesData, chiffresData } from "@/components/Data/service.data";
+import { servicesData, chiffresData } from "@/components/data/service.data";
 import "./service.css";
-// import { BsEye } from "react-icons/bs";
 import Liens from "@/components/contact/liens";
+import Video from "@/components/video/Video";
 
 export default function Service() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
+
   const [counts, setCounts] = useState(chiffresData.map(() => 0));
   const [hasAnimated, setHasAnimated] = useState(false);
   const chiffresRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsVideoVisible(window.innerWidth > 680);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -71,12 +59,8 @@ export default function Service() {
       className="service-bloc"
       style={{ backgroundColor: isVideoVisible ? "transparent" : "black" }}
     >
-      {isVideoVisible && (
-        <video autoPlay loop muted playsInline>
-          <source src="/video/webp/services.webm" type="video/mp4" />
-          Votre navigateur ne supporte pas la vidéo.
-        </video>
-      )}
+      <Video name="services" onVisibilityChange={setIsVideoVisible} />
+
       <div className="container">
         <div className="service-grid">
           {servicesData.map((category, index) => (

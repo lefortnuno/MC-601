@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import "../musics/music.css"; 
+import "../musics/music.css";
 
-import { videos } from "@/components/Data/multimedia.data";
+import { videos } from "@/components/data/multimedia.data";
+import Video from "@/components/video/Video";
 
 export default function Film() {
+  const [isVideoVisible, setIsVideoVisible] = useState(true);
   const [baseItemsPerPage, setBaseItemsPerPage] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -49,14 +51,21 @@ export default function Film() {
       .replace("watch?v=", "embed/")
       .concat("?autoplay=1&mute=0");
     setSelectedVideo(embedLink);
+    setIsVideoVisible(true);
   };
 
   const handleCloseVideo = () => {
     setSelectedVideo(null);
+    setIsVideoVisible(false);
   };
 
   return (
-    <div className="content-wrapper">
+    <div
+      className="content-wrapper"
+      style={{ backgroundColor: isVideoVisible ? "transparent" : "black" }}
+    >
+      <Video name="diaspo-mc" onVisibilityChange={setIsVideoVisible} />
+
       {selectedVideo ? (
         <div className="video-player-overlay">
           <button className="close-btn" onClick={handleCloseVideo}>
@@ -80,7 +89,7 @@ export default function Film() {
 
           {visibleVideos && (
             <div className="voir-plus">
-              <p>Aucune</p> 
+              <p>Aucune</p>
             </div>
           )}
 

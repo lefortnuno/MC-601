@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { BsSend } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
-import { contactDetails } from "@/components/Data/contact.data";
+import { contactDetails } from "@/components/data/contact.data";
 import Liens from "@/components/contact/liens";
+import Video from "@/components/video/Video";
 
 export default function Contact() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
@@ -14,19 +15,6 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsVideoVisible(window.innerWidth > 680);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const validateForm = () => {
     const newErrors = { name: "", email: "", message: "" };
@@ -113,15 +101,11 @@ export default function Contact() {
       className="contact-bloc"
       style={{ backgroundColor: isVideoVisible ? "transparent" : "black" }}
     >
-      {isVideoVisible && (
-        <video autoPlay loop muted playsInline>
-          <source
-            src="/video/webp/watersky-corporation.webm"
-            type="video/mp4"
-          />
-          Votre navigateur ne supporte pas la vidéo.
-        </video>
-      )}
+      <Video
+        name="watersky-corporation"
+        onVisibilityChange={setIsVideoVisible}
+      />
+
       <div className="contact-container">
         <div className="contact-content">
           <div className="left-side">

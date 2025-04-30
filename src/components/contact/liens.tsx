@@ -1,8 +1,7 @@
 "use client";
 
 import "./liens.css";
-import { socialLinksData } from "../Data/service.data";
- 
+import { socialLinksData } from "../data/service.data";
 
 export default function Liens() {
   return (
