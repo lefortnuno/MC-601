@@ -54,13 +54,37 @@
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
+  position: relative;
 }
 .service-card:hover {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   cursor: pointer;
+}
+
+.service-card::after {
+  content: "Nos projets";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  margin-bottom: 8px;
+  z-index: 10;
+}
+
+.service-card:hover::after {
+  opacity: 1;
 }
 
 .service-header {
