@@ -35,6 +35,7 @@ nav ul li {
   margin: 0 5px;
   cursor: pointer;
   position: relative;
+  text-transform: uppercase;
 }
 nav ul li::after {
   content: "";
