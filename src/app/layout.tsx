@@ -1,9 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Tektur } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Tektur,
+  Poppins,
+  Montserrat,
+} from "next/font/google";
 
 import "./globals.css";
 import ClientLayout from "../components/ClientLayout";
 import { Analytics } from "@vercel/analytics/react";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-poppins",
+});
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-montserrat",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${tektur.variable} antialiased`}
+        className={`${montserrat.variable} ${poppins.variable} ${geistSans.variable} ${geistMono.variable} ${tektur.variable} antialiased`}
       >
         <ClientLayout>{children}</ClientLayout>
         <Analytics />

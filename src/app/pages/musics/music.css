@@ -76,7 +76,7 @@
 .content-wrapper .video-list .video-card .video-info .channel-name {
   font-size: 0.875rem;
   color: #ddd;
-  font-family: "Bonnycastle", var(--font-tektur), Poppins, sans-serif;
+  font-family: var(--font-texte), sans-serif;
 }
 
 .content-wrapper .video-list .video-card:hover .video-info {

@@ -13,6 +13,8 @@
   --slide_tap_hover2: #fd1c1c;
   --couleur_hover: #f23b26;
   --couleur2_hover2: #fd1c1c;
+  --font-titre: "Poppins";
+  --font-texte: "Montserrat";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,8 +40,8 @@ body {
   color: #eee;
   font-size: 12px;
   overflow: hidden;
-  font-family: "Castle EF", "Bonnycastle", var(--font-tektur), Poppins,
-    sans-serif;
+  font-family: var(--font-titre), var(--font-texte), "Castle EF", "Bonnycastle",
+    var(--font-tektur), sans-serif;
 }
 
 .contenu-trofel.blur {
