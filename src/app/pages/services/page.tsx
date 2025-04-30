@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { servicesData, chiffresData } from "@/components/data/service.data";
+import {
+  servicesData,
+  chiffresData,
+} from "@/components/datawarehouse/service.data";
 import "./service.css";
 import Liens from "@/components/contact/liens";
 import Video from "@/components/video/Video";

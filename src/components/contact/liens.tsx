@@ -1,7 +1,7 @@
 "use client";
 
 import "./liens.css";
-import { socialLinksData } from "../data/service.data";
+import { socialLinksData } from "../datawarehouse/service.data";
 
 export default function Liens() {
   return (

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import "./music.css";
 import Image from "next/image";
-import { videos } from "@/components/data/music.data";
+import { videos } from "@/components/datawarehouse/music.data";
 import Video from "@/components/video/Video";
 
 export default function Music() {
@@ -59,11 +59,12 @@ export default function Music() {
   };
 
   return (
-    <div className="content-wrapper"
-          style={{ backgroundColor: isVideoVisible ? "transparent" : "black" }}
-        >
-          <Video name="diaspo-mc" onVisibilityChange={setIsVideoVisible} />
-          
+    <div
+      className="content-wrapper"
+      style={{ backgroundColor: isVideoVisible ? "transparent" : "black" }}
+    >
+      <Video name="diaspo-mc" onVisibilityChange={setIsVideoVisible} />
+
       {selectedVideo ? (
         <div className="video-player-overlay">
           <button className="close-btn" onClick={handleCloseVideo}>

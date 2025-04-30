@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import "../musics/music.css";
 
-import { videos } from "@/components/data/multimedia.data";
+import { videos } from "@/components/datawarehouse/multimedia.data";
 import Video from "@/components/video/Video";
 
 export default function Film() {
