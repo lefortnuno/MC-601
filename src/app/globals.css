@@ -22,14 +22,24 @@
   }
 }
 
+@font-face {
+  font-family: "Castle EF";
+  src: url("/fonts/Castle.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bonnycastle";
+  src: url("/fonts/Bonnycastle.woff2") format("woff2");
+}
+
 body {
   margin: 0;
   background-color: #000;
   color: #eee;
-  font-family: Poppins;
   font-size: 12px;
   overflow: hidden;
-  font-family: var(--font-tektur), sans-serif;
+  font-family: "Castle EF", "Bonnycastle", var(--font-tektur), Poppins,
+    sans-serif;
 }
 
 .contenu-trofel.blur {

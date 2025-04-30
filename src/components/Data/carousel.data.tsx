@@ -17,8 +17,7 @@ export const items: Item[] = [
     title: "WORKOUT ",
     date: "12 Janvier 2022",
     topic: "Motivation",
-    description:
-      "Fikotranana hampisaehoana sy hanana hery handrisika ny hafa hanomboka ihany koa, made by Masoandro Capital ...",
+    description: "",
     link: "https://www.youtube.com/watch?v=XVNXEC-m9eg",
   },
   {
@@ -28,8 +27,7 @@ export const items: Item[] = [
     title: "DIASPORA MALAGASY",
     date: "29 Septembre 2021",
     topic: "ANIMAL3",
-    description:
-      "Atokiny aty ivelany dia mampiseho ny fiharamihina hatrany ny Malagasy ny madagasika na samy manana ny fiaviany azy !",
+    description: "",
     link: "https://www.youtube.com/@MASOANDROCAPITAL",
   },
   {
@@ -39,8 +37,7 @@ export const items: Item[] = [
     title: "PARK VEVE",
     date: "11 Février 2025",
     topic: "Clip Rap",
-    description:
-      "Salam real family, ito ary ny vokatra nampanantenaina. 100% Malagasy 100% Malagasy. Mankasitra hatrany an'i Masoandro Capital...",
+    description: "",
     link: "https://www.youtube.com/watch?v=vupxm9kZQo8",
   },
 ];

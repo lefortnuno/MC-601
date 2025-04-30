@@ -3,6 +3,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  font-family: "Bonnycastle", var(--font-tektur), Poppins, sans-serif;
 }
 .contact-bloc video {
   position: absolute;
