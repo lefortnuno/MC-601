@@ -58,7 +58,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
             Film
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             href="/pages/multimedia"
             className={pathname === "/pages/multimedia" ? "active" : ""}
@@ -66,7 +66,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
           >
             Multimedia
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             href="/pages/services"
