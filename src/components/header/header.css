@@ -111,13 +111,14 @@ input[type="checkbox"] {
     z-index: 1000;
   }
   nav .logo img {
-    width: 340px; 
+    width: 340px;
     margin-top: 40px;
   }
   nav .menu-btn {
     position: relative;
     display: block;
-    left: 35%;
+    right: 40%;
+    top: 10%;
   }
   nav ul {
     position: fixed;
