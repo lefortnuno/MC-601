@@ -3,7 +3,6 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  font-family: "Bonnycastle", var(--font-tektur), Poppins, sans-serif;
 }
 .contact-bloc video {
   position: absolute;
@@ -108,6 +107,7 @@
   height: 55px;
   width: 100%;
   margin: 12px 0;
+  font-family: "Bonnycastle", var(--font-tektur), Poppins, sans-serif;
 }
 .right-side .input-box input,
 .right-side .input-box textarea {

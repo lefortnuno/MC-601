@@ -62,7 +62,7 @@
   color: #f1ecec;
   margin-bottom: 10px;
   font-size: 16px;
-  transition: 0.6s;
+  transition: 0.6s; 
 }
 
 .content .title {
@@ -79,7 +79,8 @@
   margin-bottom: 24px;
   line-height: 1.5em;
   text-align: justify;
-  transition: 0.6s;
+  transition: 0.6s; 
+  font-family: "Bonnycastle", var(--font-tektur), Poppins, sans-serif;
 }
 .content button {
   display: inline-flex;
