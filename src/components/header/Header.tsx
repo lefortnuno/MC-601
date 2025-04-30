@@ -17,7 +17,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
   return (
     <nav>
       <div className="logo">
-        <Link href="/" onClick={() => setMenuOpen(false)}> 
+        <Link href="/" onClick={() => setMenuOpen(false)}>
           <Image
             src="/logo/mc-white.webp"
             alt="Logo"
@@ -39,15 +39,7 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
       </label>
 
       <ul className={menuOpen ? "open" : ""}>
-        <li>
-          <Link
-            href="/"
-            className={pathname === "/" ? "active" : ""}
-            onClick={() => setMenuOpen(false)}
-          >
-            Accueil
-          </Link>
-        </li>
+         
         <li>
           <Link
             href="/pages/musics"
@@ -64,6 +56,15 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
             onClick={() => setMenuOpen(false)}
           >
             Film
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/pages/multimedia"
+            className={pathname === "/pages/multimedia" ? "active" : ""}
+            onClick={() => setMenuOpen(false)}
+          >
+            Multimedia
           </Link>
         </li>
         <li>
