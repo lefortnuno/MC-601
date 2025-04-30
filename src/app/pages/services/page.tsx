@@ -80,7 +80,14 @@ export default function Service() {
       <div className="container">
         <div className="service-grid">
           {servicesData.map((category, index) => (
-            <div key={index} className="service-card">
+            <a
+              key={index}
+              className="service-card"
+              href={category.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Nos projets"
+            >
               <div className="service-header">
                 {category.icon}
                 <h2>{category.topic}</h2>
@@ -93,7 +100,7 @@ export default function Service() {
                 ))}
               </ul>
 
-              {category.link && (
+              {/* {category.link && (
                 <div className="service-button-wrapper">
                   <a
                     target="_blank"
@@ -104,8 +111,8 @@ export default function Service() {
                     <BsEye style={{ marginRight: "0.5rem" }} /> Nos projets
                   </a>
                 </div>
-              )}
-            </div>
+              )} */}
+            </a>
           ))}
         </div>
       </div>
