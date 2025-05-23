@@ -71,7 +71,7 @@ export default function Service() {
         className="container"
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <div className="service-grid">
           {servicesData.map((category, index) => (
@@ -94,19 +94,6 @@ export default function Service() {
                   </li>
                 ))}
               </ul>
-
-              {/* {category.link && (
-                <div className="service-button-wrapper">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={category.link}
-                    className="service-button"
-                  >
-                    <BsEye style={{ marginRight: "0.5rem" }} /> Nos projets
-                  </a>
-                </div>
-              )} */}
             </a>
           ))}
         </div>

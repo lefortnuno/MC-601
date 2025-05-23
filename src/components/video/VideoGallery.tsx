@@ -94,9 +94,9 @@ export default function VideoGallery({ videos, videoName }: Props) {
                 key={v.link}
                 className="video-card"
                 onClick={() => handleVideoClick(v.link)}
-                initial={{ opacity: 0.1, x: -10 }}
+                initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0.1, x: 10 }}
+                exit={{ opacity: 0, x: 10 }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
               >
                 <div className="thumbnail-container">
