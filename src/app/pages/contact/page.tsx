@@ -7,6 +7,7 @@ import "./contact.css";
 import { contactDetails } from "@/components/datawarehouse/contact.data";
 import Liens from "@/components/contact/liens";
 import Video from "@/components/video/Video";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
@@ -106,7 +107,12 @@ export default function Contact() {
         onVisibilityChange={setIsVideoVisible}
       />
 
-      <div className="contact-container">
+      <motion.div
+        className="contact-container"
+        initial={{ opacity: 0.5 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
         <div className="contact-content">
           <div className="left-side">
             {contactDetails.map((item, index) => (
@@ -192,7 +198,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <Liens />
     </div>

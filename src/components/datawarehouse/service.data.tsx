@@ -60,7 +60,7 @@ export const servicesData: ServiceInfo[] = [
 ];
 
 export const chiffresData = [
-  { number: 5, label: "Années d'expérience" },
+  { number: 7, label: "Années d'expérience" },
   { number: 3, label: "Partenaires commerciaux" },
   { number: 96, label: "Projets réalisés" },
   { number: 97.8, label: "De clients satisfaits", isPercentage: true },

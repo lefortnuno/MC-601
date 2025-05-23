@@ -5,14 +5,14 @@
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; 
-} 
+  background-position: center;
+}
 .video-background {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
-  height: 140%; 
+  height: 140%;
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -30,7 +30,7 @@
   transform: scale(0.8);
   padding: 5px;
   box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.4);
-  border-radius: 3px; 
+  border-radius: 3px;
 }
 
 .img-container {
@@ -51,7 +51,7 @@
 
 .content {
   /* width: 530px; */
-  width: 350px;  
+  width: 350px;
   padding: 0 10px;
   margin-left: 25px;
   transition: 0.6s;
@@ -62,7 +62,7 @@
   color: #f1ecec;
   margin-bottom: 10px;
   font-size: 16px;
-  transition: 0.6s; 
+  transition: 0.6s;
 }
 
 .content .title {
@@ -79,13 +79,13 @@
   margin-bottom: 24px;
   line-height: 1.5em;
   text-align: justify;
-  transition: 0.6s; 
+  transition: 0.6s;
   font-family: "Bonnycastle", var(--font-tektur), Poppins, sans-serif;
 }
 .content button {
   display: inline-flex;
-  padding: 15px 20px;
-  font-size: 14px;
+  padding: 12px 18px;
+  font-size: 13px;
   border: none;
   text-transform: none;
   color: #fff;
@@ -209,7 +209,7 @@
   .inner-part {
     width: 95%;
     bottom: 3%;
-    padding: 0px; 
+    padding: 0px;
   }
   .content .title {
     text-align: center;

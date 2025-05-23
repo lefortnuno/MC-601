@@ -8,6 +8,7 @@ import {
 import "./service.css";
 import Liens from "@/components/contact/liens";
 import Video from "@/components/video/Video";
+import { motion } from "framer-motion";
 
 export default function Service() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
@@ -36,20 +37,22 @@ export default function Service() {
   useEffect(() => {
     if (!hasAnimated) return;
 
+    const totalDuration = 2500; // durée totale en ms
+    const steps = 100; // nombre d'étapes de l'animation
     const intervals = chiffresData.map((item, index) => {
-      const increment = Math.ceil(item.number / 100);
+      const target = item.number;
+      const increment = Math.ceil(target / steps);
+      const intervalTime = totalDuration / Math.ceil(target / increment);
+
       return setInterval(() => {
         setCounts((prev) => {
           const newCounts = [...prev];
-          if (newCounts[index] < item.number) {
-            newCounts[index] = Math.min(
-              newCounts[index] + increment,
-              item.number
-            );
+          if (newCounts[index] < target) {
+            newCounts[index] = Math.min(newCounts[index] + increment, target);
           }
           return newCounts;
         });
-      }, 20);
+      }, intervalTime);
     });
 
     return () => {
@@ -64,7 +67,12 @@ export default function Service() {
     >
       <Video name="services" onVisibilityChange={setIsVideoVisible} />
 
-      <div className="container">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0.5 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
         <div className="service-grid">
           {servicesData.map((category, index) => (
             <a
@@ -102,7 +110,7 @@ export default function Service() {
             </a>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       <div className="chiffres-section" ref={chiffresRef}>
         <h2 className="chiffres-title">Nos chiffres clés</h2>

@@ -3,24 +3,31 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import "../musics/music.css";
-import { videos } from "@/components/datawarehouse/film.data";
+import { videos } from "@/dwmusicfilm/film.data";
 import Video from "@/components/video/Video";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Film() {
   const [isVideoVisible, setIsVideoVisible] = useState(true);
   const [baseItemsPerPage, setBaseItemsPerPage] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [isReady, setIsReady] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false); // 👈 Ajouté
 
   useEffect(() => {
     const updateItemsPerPage = () => {
       const width = window.innerWidth;
+
       if (width < 600) {
         setBaseItemsPerPage(3);
+        setIsSmallScreen(true);
       } else if (width < 1024) {
         setBaseItemsPerPage(5);
+        setIsSmallScreen(false);
       } else {
         setBaseItemsPerPage(7);
+        setIsSmallScreen(false);
       }
     };
 
@@ -29,6 +36,12 @@ export default function Film() {
 
     return () => window.removeEventListener("resize", updateItemsPerPage);
   }, []);
+
+  useEffect(() => {
+    setIsReady(false);
+    const timeout = setTimeout(() => setIsReady(true), 300);
+    return () => clearTimeout(timeout);
+  }, [currentIndex, baseItemsPerPage]);
 
   const hasPreviousVideos = currentIndex > 0;
   const itemsPerPage = hasPreviousVideos
@@ -80,16 +93,35 @@ export default function Film() {
         </div>
       ) : (
         <div className="video-list">
-          {hasPreviousVideos && (
-            <div className="voir-plus" onClick={handleShowPrevious}>
-              <p>Voir Précédents</p>
-            </div>
+          {isSmallScreen ? (
+            hasPreviousVideos &&
+            isReady && (
+              <div className="voir-plus" onClick={handleShowPrevious}>
+                <p>Voir Précédents</p>
+              </div>
+            )
+          ) : (
+            <AnimatePresence>
+              {hasPreviousVideos && isReady && (
+                <motion.div
+                  className="voir-plus"
+                  onClick={handleShowPrevious}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -10 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p>Voir Précédents</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           )}
 
           {visibleVideos.map((video, index) => (
             <div
               key={index}
-              className="video-card"
+              className="video-card video-card-animated"
+              style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => handleVideoClick(video.link)}
             >
               <div className="thumbnail-container">
@@ -104,16 +136,34 @@ export default function Film() {
                 <p className="duration">{video.duration}</p>
                 <div className="video-info">
                   <h2 className="title">{video.title}</h2>
-                  <p className="channel-name">{video.channelName}</p>
+                  <p className="channel-name">{video.author_name}</p>
                 </div>
               </div>
             </div>
           ))}
 
-          {hasNextVideos && (
-            <div className="voir-plus" onClick={handleShowNext}>
-              <p>Voir Plus</p>
-            </div>
+          {isSmallScreen ? (
+            hasNextVideos &&
+            isReady && (
+              <div className="voir-plus" onClick={handleShowNext}>
+                <p>Voir Plus</p>
+              </div>
+            )
+          ) : (
+            <AnimatePresence>
+              {hasNextVideos && isReady && (
+                <motion.div
+                  className="voir-plus"
+                  onClick={handleShowNext}
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 10 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <p>Voir Plus</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           )}
         </div>
       )}
