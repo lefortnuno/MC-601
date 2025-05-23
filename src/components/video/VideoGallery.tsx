@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import Video from "@/components/video/Video";
 import "./videogallery.css";
 
@@ -88,35 +87,29 @@ export default function VideoGallery({ videos, videoName }: Props) {
             </div>
           )}
 
-          <AnimatePresence mode="wait">
-            {visible.map((v, i) => (
-              <motion.div
-                key={v.link}
-                className="video-card"
-                onClick={() => handleVideoClick(v.link)}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 10 }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-              >
-                <div className="thumbnail-container">
-                  <Image
-                    src={v.thumbnail}
-                    alt={v.title}
-                    width={300}
-                    height={169}
-                    priority
-                    className="thumbnail"
-                  />
-                  <p className="duration">{v.duration}</p>
-                  <div className="video-info">
-                    <h2 className="title">{v.title}</h2>
-                    <p className="channel-name">{v.author_name}</p>
-                  </div>
+          {visible.map((v, i) => (
+            <div
+              key={v.link}
+              className="video-card"
+              onClick={() => handleVideoClick(v.link)}
+            >
+              <div className="thumbnail-container">
+                <Image
+                  src={v.thumbnail}
+                  alt={v.title}
+                  width={300}
+                  height={169}
+                  priority
+                  className="thumbnail"
+                />
+                <p className="duration">{v.duration}</p>
+                <div className="video-info">
+                  <h2 className="title">{v.title}</h2>
+                  <p className="channel-name">{v.author_name}</p>
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+              </div>
+            </div>
+          ))}
 
           {hasNext && (
             <div className="voir-plus" onClick={handleNext}>
