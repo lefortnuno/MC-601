@@ -6,7 +6,13 @@ export interface VideoItem {
   link: string;
 }
 
-export const videos: VideoItem[] = [
+export const videos: VideoItem[] = [{
+    thumbnail: "/images/musics/tsyHoZao.webp",
+    duration: "3:47",
+    title: "SOUDARA - Pas de Repos Sans Réussite",
+    channelName: "Directed by Tony Braven",
+    link: "https://youtu.be/2XOd2k2LOC0?si=aw7jxNAhzd1vyPyJ",
+  },
   {
     thumbnail: "/images/musics/tsyHoZao.webp",
     duration: "3:29",
