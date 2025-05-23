@@ -87,7 +87,7 @@ export default function VideoGallery({ videos, videoName }: Props) {
             </div>
           )}
 
-          {visible.map((v, i) => (
+          {visible.map((v) => (
             <div
               key={v.link}
               className="video-card"
