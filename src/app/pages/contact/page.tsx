@@ -5,7 +5,7 @@ import { BsSend } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 import { contactDetails } from "@/components/datawarehouse/contact.data";
-import Liens from "@/components/contact/liens";
+import Liens from "@/components/sociaux/liens";
 import Video from "@/components/video/Video";
 import { motion } from "framer-motion";
 

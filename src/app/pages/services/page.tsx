@@ -6,7 +6,7 @@ import {
   chiffresData,
 } from "@/components/datawarehouse/service.data";
 import "./service.css";
-import Liens from "@/components/contact/liens";
+import Liens from "@/components/sociaux/liens";
 import Video from "@/components/video/Video";
 import { motion } from "framer-motion";
 

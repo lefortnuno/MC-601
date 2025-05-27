@@ -1,0 +1,22 @@
+.social-links {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.social-link {
+  color: white;
+  font-size: 1.6rem;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; 
+  border-radius: 50%;  
+  background-color: transparent;
+}
+
+.social-link:hover {
+  transform: translateY(-3px); 
+  color: #ff4c4c;
+  background-color: #fff;
+}

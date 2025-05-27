@@ -3,7 +3,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-} 
+}
 
 .contact-bloc::after {
   content: "";
@@ -102,7 +102,7 @@
 .right-side .input-box textarea {
   color: #fff;
   height: 100%;
-  width: 100%; 
+  width: 100%;
   outline: none;
   font-size: 16px;
   background: transparent;
@@ -197,6 +197,16 @@
 
 .error-input {
   border: 1px solid red !important;
+}
+
+.clickable {
+  color: #afafb6;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.clickable:hover {
+  color: #ff4d4d;
 }
 
 @media (max-width: 600px) {
