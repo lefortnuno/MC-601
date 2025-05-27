@@ -35,13 +35,13 @@ const geistMono = Geist_Mono({
 const tektur = Tektur({
   variable: "--font-tektur",
   subsets: ["latin"],
-  weight: ["400", "900"], // Tu peux ajuster selon ton besoin
+  weight: ["400", "900"],  
 });
 
 export const metadata: Metadata = {
-  title: "MC | Masoandro Capital",
+  title: "Masoandro Capital | MC",
   description:
-    "Masoandro Capital &ndash; &Eacute;clairer vos r&ecirc;ves en images.<br /><br /> Cr&eacute;ateurs d&rsquo;&eacute;motions et b&acirc;tisseurs d&rsquo;images, chez Masoandro Capital, chaque projet est une aventure. Clips, courts-m&eacute;trages, interviews, documentaires : nous transformons vos id&eacute;es en &oelig;uvres visuelles fortes et inspirantes.<br /><br /> Qui suis-je ? Je suis Tony Braven, r&eacute;alisateur n&eacute; sous le soleil de Tul&eacute;ar, Madagascar. Port&eacute; par mes racines et ma passion du cin&eacute;ma, je crois au pouvoir des images pour changer les regards et raconter des histoires vraies, vibrantes, authentiques. Avec Masoandro Capital, mon objectif est simple : donner vie &agrave; vos r&ecirc;ves, une image &agrave; la fois.<br /><br /> Pr&ecirc;t &agrave; cr&eacute;er quelque chose d&rsquo;unique ensemble ?",
+    "Masoandro Capital &ndash; &Eacute;clairer vos r&ecirc;ves en images. Cr&eacute;ateurs d&rsquo;&eacute;motions et b&acirc;tisseurs d&rsquo;images, chez Masoandro Capital, chaque projet est une aventure. Clips, courts-m&eacute;trages, interviews, documentaires : nous transformons vos id&eacute;es en &oelig;uvres visuelles fortes et inspirantes. Qui suis-je ? Je suis Tony Braven, r&eacute;alisateur n&eacute; sous le soleil de Tul&eacute;ar, Madagascar. Port&eacute; par mes racines et ma passion du cin&eacute;ma, je crois au pouvoir des images pour changer les regards et raconter des histoires vraies, vibrantes, authentiques. Avec Masoandro Capital, mon objectif est simple : donner vie &agrave; vos r&ecirc;ves, une image &agrave; la fois. Pr&ecirc;t &agrave; cr&eacute;er quelque chose d&rsquo;unique ensemble ?",
   icons: {
     icon: "/logo/favicon_io/favicon.ico",
     shortcut: "/logo/favicon_io/android-chrome-512x512.png",
@@ -49,9 +49,7 @@ export const metadata: Metadata = {
   },
 
   robots: "index, follow",
-  alternates: {
-    canonical: "https://masoandrocapital.vercel.app/",
-  },
+  alternates: { canonical: "https://masoandrocapital.com/" },
 };
 
 export default function RootLayout({

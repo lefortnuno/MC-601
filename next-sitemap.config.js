@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://masoandrocapital.vercel.app",
+  siteUrl: "https://masoandrocapital.com",
   generateRobotsTxt: true,
   outDir: "./public",
   changefreq: "weekly",
@@ -8,7 +8,7 @@ module.exports = {
   sitemapSize: 5000,
   exclude: [], // exclure certaines pages
 
-  // Ajout de pages manuelles 
+  // Ajout de pages manuelles
   additionalPaths: async (config) => [
     await config.transform(config, "/pages/musics"),
     await config.transform(config, "/pages/film"),
