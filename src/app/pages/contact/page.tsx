@@ -140,8 +140,7 @@ export default function Contact() {
           <div className="right-side">
             <div className="topic-text">Envoyez-nous un message</div>
             <p>
-              Si vous avez du travail pour moi ou toute question, n&apos;hésitez
-              pas à me contacter.
+              Agence au services de la production audiovisuelle, Notre mission ? Mettre l&apos;image au service de vos idées. 
             </p>
             <form onSubmit={handleSubmit}>
               <div className={`input-box ${errors.name ? "error" : ""}`}>
