@@ -13,5 +13,6 @@ module.exports = {
     await config.transform(config, "/pages/musics"),
     await config.transform(config, "/pages/film"),
     await config.transform(config, "/pages/contact"),
+    await config.transform(config, "/pages/services"),
   ],
 };
