@@ -35,7 +35,7 @@ const geistMono = Geist_Mono({
 const tektur = Tektur({
   variable: "--font-tektur",
   subsets: ["latin"],
-  weight: ["400", "900"],  
+  weight: ["400", "900"],
 });
 
 export const metadata: Metadata = {
@@ -47,7 +47,14 @@ export const metadata: Metadata = {
     shortcut: "/logo/favicon_io/android-chrome-512x512.png",
     apple: "/logo/favicon_io/apple-touch-icon.png",
   },
-
+  keywords: [
+    "Audiovisuel",
+    "Audiovisuelle",
+    "Montages video",
+    "MOntages clip",
+    "Nuno Lefort",
+    "Trofel",
+  ],
   robots: "index, follow",
   alternates: { canonical: "https://masoandrocapital.com/" },
 };
