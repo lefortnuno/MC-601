@@ -8,6 +8,13 @@ export interface VideoItem {
 
 export const videos: VideoItem[] = [
   {
+    thumbnail: "/images/musics/miaramila.webp",
+    duration: "3:25",
+    title: "Soudarà - Miara Mila",
+    author_name: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=__gK5geOLWo",
+  },
+  {
     thumbnail: "/images/musics/pdrsr.webp",
     duration: "3:47",
     title: "SOUDARA - Pas de Repos Sans Réussite",
