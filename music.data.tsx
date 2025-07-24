@@ -15,6 +15,13 @@ export const videos: VideoItem[] = [
     link: "https://www.youtube.com/watch?v=__gK5geOLWo",
   },
   {
+    thumbnail: "/images/musics/vain'afo.webp",
+    duration: "4:01",
+    title: "VAIN'AF JOKE MAMY",
+    author_name: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=UyATUjUaI8Q",
+  },
+  {
     thumbnail: "/images/musics/pdrsr.webp",
     duration: "3:47",
     title: "SOUDARA - Pas de Repos Sans Réussite",
