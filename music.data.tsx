@@ -18,7 +18,7 @@ export const videos: VideoItem[] = [
     thumbnail: "/images/film/VAIN_AFextrait.png",
     duration: "00:26",
     title: "Extrait Vain’af",
-    author_name: "Directed by Tony Braven",
+    author_name: "Directed by Moozik",
     link: "/images/film/VAIN_AF.mp4",
   }, 
   {
