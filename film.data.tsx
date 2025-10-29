@@ -8,6 +8,13 @@ export interface VideoItem {
 
 export const videos: VideoItem[] = [
   {
+    thumbnail: "/images/film/vainAFOlive.png",
+    duration: "1:04:05",
+    title: "Vain’af, entre tradition et Punk rock | Live à La Teinturerie 2025",
+    author_name: "Directed by Tony Braven",
+    link: "https://www.youtube.com/watch?v=qWBvnzMPGzw",
+  },
+  {
     thumbnail: "/images/film/motivation2.webp",
     duration: "1:44",
     title: "Motivation 2",
