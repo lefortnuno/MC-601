@@ -8,6 +8,13 @@ export interface VideoItem {
 
 export const videos: VideoItem[] = [
   {
+    thumbnail: "/images/film/VAIN_AFextrait.png",
+    duration: "00:26",
+    title: "Extrait Vain’af",
+    author_name: "Directed by Tony Braven",
+    link: "/images/film/VAIN_AF.mp4",
+  },
+  {
     thumbnail: "/images/film/vainAFOlive.png",
     duration: "1:04:05",
     title: "Vain’af, Tradition & Punk rock",
