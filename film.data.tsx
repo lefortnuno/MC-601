@@ -10,7 +10,7 @@ export const videos: VideoItem[] = [
   {
     thumbnail: "/images/film/vainAFOlive.png",
     duration: "1:04:05",
-    title: "Vain’af, entre tradition et Punk rock | Live à La Teinturerie 2025",
+    title: "Vain’af, Tradition & Punk rock",
     author_name: "Directed by Tony Braven",
     link: "https://www.youtube.com/watch?v=qWBvnzMPGzw",
   },

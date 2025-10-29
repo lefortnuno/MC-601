@@ -10,7 +10,7 @@ export const videos: VideoItem[] = [
   {
     thumbnail: "/images/musics/vainAFOalbum.png",
     duration: "12:25",
-    title: "ALBUM VAIN'AFO",
+    title: "ALBUM VAIN'AF",
     author_name: "Directed by Tony Braven",
     link: "https://on.soundcloud.com/L8t6c3GZQ3HfplGZHK",
   },
