@@ -29,6 +29,13 @@ export const videos: VideoItem[] = [
     link: "https://on.soundcloud.com/L8t6c3GZQ3HfplGZHK",
   },
   {
+    thumbnail: "/images/musics/vainAFOlive.png",
+    duration: "28:48",
+    title: "Live intégral Vain'af - Festival de l'ÉcologieAntsirabe 2025",
+    author_name: "Directed by Tony Braven",
+    link: "https://youtu.be/1tB9ILvsVk0?si=ESn49WltuKKmVIQb",
+  },
+  {
     thumbnail: "/images/musics/miaramila.webp",
     duration: "3:25",
     title: "Soudarà - Miara Mila",
