@@ -31,9 +31,9 @@ export const videos: VideoItem[] = [
   {
     thumbnail: "/images/musics/vainAFOlive.png",
     duration: "28:48",
-    title: "Live intégral Vain'af - Festival de l'ÉcologieAntsirabe 2025",
+    title: "Vain'af - Festival de l'Écologie",
     author_name: "Directed by Tony Braven",
-    link: "https://youtu.be/1tB9ILvsVk0?si=ESn49WltuKKmVIQb",
+    link: "https://m.youtube.com/watch?v=1tB9ILvsVk0",
   },
   {
     thumbnail: "/images/musics/miaramila.webp",
