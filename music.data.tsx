@@ -29,7 +29,7 @@ export const videos: VideoItem[] = [
     link: "https://on.soundcloud.com/L8t6c3GZQ3HfplGZHK",
   },
   {
-    thumbnail: "/images/musics/vainAFOlive.png",
+    thumbnail: "/images/film/vainAFOlive.png",
     duration: "28:48",
     title: "Vain'af - Festival de l'Écologie",
     author_name: "Directed by Tony Braven",
