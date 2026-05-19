@@ -1,5 +1,5 @@
 .video-arriere-plan {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -7,5 +7,6 @@
   height: 110%;
   object-fit: cover;
   z-index: -2;
-  filter: blur(1px) grayscale(100%);
+  filter: grayscale(100%) contrast(1.05);
+  opacity: 0.3;
 }

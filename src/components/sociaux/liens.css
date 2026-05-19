@@ -1,22 +1,33 @@
 .social-links {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 0;
+  right: 0;
   display: flex;
-  gap: 1rem;
+  gap: 0;
   z-index: 10;
+  background: var(--ink);
+  border-top: var(--border-w) solid var(--ink);
+  border-left: var(--border-w) solid var(--ink);
 }
 
 .social-link {
-  color: white;
-  font-size: 1.6rem;
-  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; 
-  border-radius: 50%;  
-  background-color: transparent;
+  color: var(--bg);
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.social-link:first-child {
+  border-left: none;
 }
 
 .social-link:hover {
-  transform: translateY(-3px); 
-  color: #ff4c4c;
-  background-color: #fff;
+  background: var(--blood);
+  color: var(--bg);
 }

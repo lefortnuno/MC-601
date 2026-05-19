@@ -49,6 +49,11 @@ export default function Carousel() {
         <source src={activeItem.video} type="video/webm" />
         Votre navigateur ne supporte pas la vidéo.
       </video>
+      <h1 className="brand-mark">
+        BABOKE<br />
+        <span className="accent">FILMS</span>
+        <span className="tag">MADAGASCAR &rarr; MONDE</span>
+      </h1>
       <div className="sliders">
         {items.map((_, index) => (
           <button

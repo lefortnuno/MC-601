@@ -3,25 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --couleur: #e53935;
-  --couleur2: #d32f2f;
-  --slide_tap: #fe8a39;
-  --slide_tap2: #f23b26;
-  --slide_tap_hover: #fe791b;
-  --slide_tap_hover2: #fd1c1c;
-  --couleur_hover: #f23b26;
-  --couleur2_hover2: #fd1c1c;
+  --bg: #f2efe8;
+  --bg-paper: #ebe7dd;
+  --ink: #0a0a0a;
+  --ink-soft: #1a1a1a;
+  --mute: #6b6b6b;
+  --line: #1a1a1a;
+  --blood: #d92121;
+  --blood-dark: #a01515;
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --couleur: var(--blood);
+  --couleur2: var(--blood-dark);
+  --slide_tap: var(--ink);
+  --slide_tap2: var(--blood);
+  --slide_tap_hover: var(--blood);
+  --slide_tap_hover2: var(--blood-dark);
   --font-titre: "Poppins";
   --font-texte: "Montserrat";
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --border-w: 3px;
+  --shadow-hard: 6px 6px 0 var(--ink);
 }
 
 @font-face {
@@ -34,14 +35,23 @@
   src: url("/fonts/Bonnycastle.woff2") format("woff2");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background-color: #000;
-  color: #eee;
-  font-size: 12px;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-size: 14px;
   overflow: hidden;
-  font-family: var(--font-titre), var(--font-texte), "Castle EF", "Bonnycastle",
-    var(--font-tektur), sans-serif;
+  font-family: var(--font-poppins), var(--font-titre), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--blood);
+  color: var(--bg);
 }
 
 .contenu-trofel.blur {

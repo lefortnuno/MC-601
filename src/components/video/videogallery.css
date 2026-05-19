@@ -1,43 +1,53 @@
 .content-wrapper {
-  padding: 0 16px;
-  overflow-x: hidden;
+  padding: 0;
   width: 100%;
   position: relative;
   min-height: 100vh;
   height: 100%;
+  background: var(--bg);
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
-.service-bloc::-webkit-scrollbar {
+
+.content-wrapper::-webkit-scrollbar {
   display: none;
 }
+
 .content-wrapper::after {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  inset: 0;
+  background: rgba(242, 239, 232, 0.92);
   z-index: -1;
 }
 
 .content-wrapper .video-list {
   position: relative;
   display: grid;
-  gap: 16px;
-  padding: 30px 0;
-  top: 100px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0;
+  padding: 96px 24px 64px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  border-bottom: var(--border-w) solid var(--ink);
 }
 
 .content-wrapper .video-list .video-card {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border: var(--border-w) solid var(--ink);
+  margin: -1.5px;
+  background: var(--ink);
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.content-wrapper .video-list .video-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 var(--ink);
+  z-index: 2;
 }
 
 .content-wrapper .video-list .video-card .thumbnail-container {
@@ -47,61 +57,76 @@
 
 .content-wrapper .video-list .video-card .thumbnail {
   width: 100%;
+  display: block;
   object-fit: cover;
-  border-radius: 8px;
   aspect-ratio: 16 / 9;
-  background: var(--light-white-color);
+  border-radius: 0;
+  filter: grayscale(30%);
+  transition: filter 0.2s ease;
+}
+
+.content-wrapper .video-list .video-card:hover .thumbnail {
+  filter: grayscale(0%);
 }
 
 .content-wrapper .video-list .video-card .duration {
   position: absolute;
-  right: 10px;
-  bottom: 12px;
-  color: #fff;
-  font-size: 0.675rem;
-  padding: 5px 8px;
-  border-radius: 5px;
-  background: var(--overlay-dark-color);
+  right: 0;
+  bottom: 0;
+  color: var(--bg);
+  background: var(--ink);
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 9px;
+  border-top: 2px solid var(--bg);
+  border-left: 2px solid var(--bg);
+  letter-spacing: 0.05em;
+  border-radius: 0;
 }
 
 .content-wrapper .video-list .video-card .video-info {
   position: absolute;
+  inset: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   flex-direction: column;
   text-transform: uppercase;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 12px 16px;
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(0px);
-  transition: 0.6s;
-  gap: 10px;
-}
-
-.content-wrapper .video-list .video-card .video-info .title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 4px;
-}
-
-.content-wrapper .video-list .video-card .video-info .channel-name {
-  font-size: 0.875rem;
-  color: #ddd;
-  font-family: var(--font-texte), sans-serif;
+  text-align: left;
+  color: var(--bg);
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.6) 40%,
+    rgba(10, 10, 10, 0) 70%
+  );
+  padding: 16px;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .content-wrapper .video-list .video-card:hover .video-info {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(3px);
+  opacity: 1;
+}
+
+.content-wrapper .video-list .video-card .video-info .title {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--bg);
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.content-wrapper .video-list .video-card .video-info .channel-name {
+  font-size: 11px;
+  color: var(--bg);
+  opacity: 0.7;
+  font-family: ui-monospace, "Courier New", monospace;
+  letter-spacing: 0.08em;
+  margin: 0;
 }
 
 .voir-plus {
@@ -111,81 +136,82 @@
   text-align: center;
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  background: var(--bg-paper);
+  border: var(--border-w) solid var(--ink);
+  margin: -1.5px;
   cursor: pointer;
   position: relative;
-  backdrop-filter: blur(5px);
-  transition: 0.6s;
-}
-
-.voir-plus p {
-  color: #ff0000;
-  font-size: 1rem;
-  font-weight: bold;
-  border: 2px solid #ff0000;
-  padding: 6px 14px;
-  border-radius: 4px;
-  transition: 0.6s;
+  border-radius: 0;
+  transition: background 0.15s ease;
 }
 
 .voir-plus:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
+  background: var(--blood);
+}
+
+.voir-plus p {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  padding: 0;
 }
 
 .voir-plus:hover p {
-  color: white;
-  border-color: white;
+  color: var(--bg);
 }
 
 .video-player-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  inset: 0;
+  background: rgba(10, 10, 10, 0.95);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1002;
+  padding: 24px;
 }
 
 .video-player {
-  width: 80%;
-  height: 60%;
-  max-width: 800px;
-  border-radius: 8px;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-width: 1000px;
+  border: var(--border-w) solid var(--bg);
+  border-radius: 0;
+  background: #000;
 }
 
 .close-btn {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 24px;
-  color: white;
-  background: none;
-  border: none;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--bg);
+  background: var(--ink);
+  border: 2px solid var(--bg);
+  padding: 8px 14px;
   cursor: pointer;
   z-index: 1003;
+  border-radius: 0;
+  letter-spacing: 0.1em;
 }
 
-.video-card {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.video-card:hover {
-  transform: scale(1.005);
+.close-btn:hover {
+  background: var(--blood);
 }
 
 @media (max-width: 680px) {
+  .content-wrapper .video-list {
+    padding: 96px 16px 48px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
   .close-btn {
     top: 80px;
-    right: 40px;
+    right: 20px;
   }
 }
-
