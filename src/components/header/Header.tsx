@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { BsList, BsXLg } from "react-icons/bs";
 import "./header.css";
 
@@ -18,12 +17,12 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
     <nav>
       <div className="logo">
         <Link href="/" onClick={() => setMenuOpen(false)}>
-          <Image
-            src="/logo/mc-white.webp"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo/boboke.ico"
             alt="Logo"
-            width={300}
+            width={90}
             height={60}
-            priority
           />
         </Link>
       </div>

@@ -39,9 +39,9 @@ const tektur = Tektur({
 });
 
 export const metadata: Metadata = {
-  title: "Masoandro Capital  - Agence audiovisuelle à Madagascar",
+  title: "Baboke films  - Agence audiovisuelle à Madagascar",
   description:
-    "Masoandro Capital &ndash; &Eacute;clairer vos r&ecirc;ves en images. Cr&eacute;ateurs d&rsquo;&eacute;motions et b&acirc;tisseurs d&rsquo;images, chez Masoandro Capital, chaque projet est une aventure. Clips, courts-m&eacute;trages, interviews, documentaires : nous transformons vos id&eacute;es en &oelig;uvres visuelles fortes et inspirantes. Qui suis-je ? Je suis Tony Braven, r&eacute;alisateur n&eacute; sous le soleil de Tul&eacute;ar, Madagascar. Port&eacute; par mes racines et ma passion du cin&eacute;ma, je crois au pouvoir des images pour changer les regards et raconter des histoires vraies, vibrantes, authentiques. Avec Masoandro Capital, mon objectif est simple : donner vie &agrave; vos r&ecirc;ves, une image &agrave; la fois. Pr&ecirc;t &agrave; cr&eacute;er quelque chose d&rsquo;unique ensemble ? Venez chez nous Agence audiovisuelle à Madagascar.",
+    "Baboke films &ndash; &Eacute;clairer vos r&ecirc;ves en images. Cr&eacute;ateurs d&rsquo;&eacute;motions et b&acirc;tisseurs d&rsquo;images, chez Baboke films, chaque projet est une aventure. Clips, courts-m&eacute;trages, interviews, documentaires : nous transformons vos id&eacute;es en &oelig;uvres visuelles fortes et inspirantes. Qui suis-je ? Je suis Tony Braven, r&eacute;alisateur n&eacute; sous le soleil de Tul&eacute;ar, Madagascar. Port&eacute; par mes racines et ma passion du cin&eacute;ma, je crois au pouvoir des images pour changer les regards et raconter des histoires vraies, vibrantes, authentiques. Avec Baboke films, mon objectif est simple : donner vie &agrave; vos r&ecirc;ves, une image &agrave; la fois. Pr&ecirc;t &agrave; cr&eacute;er quelque chose d&rsquo;unique ensemble ? Venez chez nous Agence audiovisuelle à Madagascar.",
   icons: {
     icon: "/logo/favicon_io/favicon.ico",
     shortcut: "/logo/favicon_io/android-chrome-512x512.png",

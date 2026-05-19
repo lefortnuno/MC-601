@@ -29,8 +29,15 @@ export default function Video({ name, onVisibilityChange }: VideoProps) {
   return (
     <>
       {isVideoVisible && (
-        <video autoPlay loop muted playsInline className="video-arriere-plan">
-          <source src={`/video/webp/${name}.webm`} type="video/mp4" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="video-arriere-plan"
+        >
+          <source src={`/video/webp/${name}.webm`} type="video/webm" />
           Votre navigateur ne supporte pas la vidéo.
         </video>
       )}

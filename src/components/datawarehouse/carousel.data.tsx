@@ -43,7 +43,7 @@ export const items: Item[] = [
   {
     imgSrc: "/images/diaspo.webp",
     video: "/video/webp/diaspo-mc.webm",
-    author: "Masoandro Capital",
+    author: "Baboke films",
     title: "DIASPORA MALAGASY",
     date: "29 Septembre 2022",
     topic: "ANIMAL3",

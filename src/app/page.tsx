@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { BsPlus } from "react-icons/bs";
 import { items } from "@/components/datawarehouse/carousel.data";
@@ -9,31 +9,18 @@ import "./pages/sliders/carousel.css";
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      handleNextSlide();
+      setTransitioning(true);
+      setTimeout(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
+        setTransitioning(false);
+      }, 500);
     }, 15000);
 
     return () => clearInterval(interval);
-  }, [activeIndex]);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.load();
-      videoRef.current.play().catch(() => {});
-    }
-  }, [activeIndex]);
-
-  const handleNextSlide = () => {
-    setTransitioning(true);
-    setTimeout(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
-      setTransitioning(false);
-    }, 500);
-  };
+  }, []);
 
   const handleManualSlide = (index: number) => {
     setTransitioning(true);
@@ -43,19 +30,23 @@ export default function Carousel() {
     }, 500);
   };
 
+  const activeItem = items[activeIndex];
+
   return (
     <div className="blog-card">
       <video
-        ref={videoRef}
+        key={activeItem.video}
         className="video-background"
         autoPlay
         loop
         muted
         playsInline
+        preload="metadata"
+        poster={activeItem.imgSrc}
         disablePictureInPicture
         controls={false}
       >
-        <source src={items[activeIndex].video} type="video/mp4" />
+        <source src={activeItem.video} type="video/webm" />
         Votre navigateur ne supporte pas la vidéo.
       </video>
       <div className="sliders">
@@ -70,20 +61,22 @@ export default function Carousel() {
       <div className="inner-part">
         <div className={`img-container ${transitioning ? "move-left" : ""}`}>
           <Image
-            src={items[activeIndex].imgSrc}
-            alt={items[activeIndex].title}
+            src={activeItem.imgSrc}
+            alt={activeItem.title}
             width={200}
             height={200}
+            sizes="200px"
+            priority
             className="images-works"
           />
         </div>
         <div className="content">
-          <span>{items[activeIndex].date}</span>
-          <div className="title">{items[activeIndex].title}</div>
-          <div className="text">{items[activeIndex].description}</div>
+          <span>{activeItem.date}</span>
+          <div className="title">{activeItem.title}</div>
+          <div className="text">{activeItem.description}</div>
           <button>
             <a
-              href={items[activeIndex].link}
+              href={activeItem.link}
               target="_blank"
               rel="noopener noreferrer"
             >

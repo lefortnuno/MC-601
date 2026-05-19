@@ -87,7 +87,7 @@ export default function VideoGallery({ videos, videoName }: Props) {
             </div>
           )}
 
-          {visible.map((v) => (
+          {visible.map((v, i) => (
             <div
               key={v.link}
               className="video-card"
@@ -99,7 +99,9 @@ export default function VideoGallery({ videos, videoName }: Props) {
                   alt={v.title}
                   width={300}
                   height={169}
-                  priority
+                  sizes="(max-width: 600px) 33vw, (max-width: 1024px) 20vw, 300px"
+                  priority={i < 3}
+                  loading={i < 3 ? "eager" : "lazy"}
                   className="thumbnail"
                 />
                 <p className="duration">{v.duration}</p>
