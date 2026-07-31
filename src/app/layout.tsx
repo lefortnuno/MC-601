@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     "Trofel",
   ],
   robots: "index, follow",
-  alternates: { canonical: "https://masoandrocapital.com/" },
+  alternates: { canonical: "https://babokefilms.com/" },
 };
 
 export default function RootLayout({

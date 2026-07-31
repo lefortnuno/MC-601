@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://masoandrocapital.com",
+  siteUrl: "https://babokefilms.com",
   generateRobotsTxt: true,
   outDir: "./public",
   changefreq: "weekly",
