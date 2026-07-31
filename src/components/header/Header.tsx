@@ -19,10 +19,10 @@ export default function Header({ menuOpen, setMenuOpen }: HeaderProps) {
         <Link href="/" onClick={() => setMenuOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo/boboke.ico"
-            alt="Logo"
-            width={90}
-            height={60}
+            src="/logo/baboke-icon-white.png"
+            alt="Baboke Films"
+            width={72}
+            height={88}
           />
         </Link>
       </div>
