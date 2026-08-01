@@ -1,0 +1,44 @@
+name: Sync YouTube videos
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # every day at 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python (for yt-dlp)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install yt-dlp
+        run: pip install -U yt-dlp
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch channel videos and regenerate data files
+        run: node scripts/fetch-youtube-videos.mjs
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- music.data.tsx film.data.tsx; then
+            echo "No new videos, nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add music.data.tsx film.data.tsx
+          git commit -m "chore: sync videos from YouTube channel"
+          git push
