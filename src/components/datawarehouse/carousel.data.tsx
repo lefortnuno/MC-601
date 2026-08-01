@@ -11,8 +11,8 @@ export interface Item {
 
 export const items: Item[] = [
   {
-    imgSrc: "/images/musics/vain'afo.webp",
-    video: "/video/webp/vainafo.webm",
+    imgSrc: "/images/fitampoha-1.webp",
+    video: "/video/webp/fitampoha-1.webm",
     author: "601 Bro",
     title: "VAIN'AF",
     date: "12 Juillet 2025",
@@ -31,8 +31,8 @@ export const items: Item[] = [
   //   link: "https://www.youtube.com/watch?v=XVNXEC-m9eg",
   // },
   {
-    imgSrc: "/images/veve2.webp",
-    video: "/video/webp/veve-workout2.webm",
+    imgSrc: "/images/fitampoha-2.webp",
+    video: "/video/webp/fitampoha-2.webm",
     author: "Tony Braven",
     title: "PARC VEVE",
     date: "11 Février 2024",
@@ -41,8 +41,8 @@ export const items: Item[] = [
     link: "https://www.youtube.com/watch?v=vupxm9kZQo8",
   },
   {
-    imgSrc: "/images/diaspo.webp",
-    video: "/video/webp/diaspo-mc.webm",
+    imgSrc: "/images/fitampoha-3.webp",
+    video: "/video/webp/fitampoha-3.webm",
     author: "Baboke films",
     title: "DIASPORA MALAGASY",
     date: "29 Septembre 2022",
